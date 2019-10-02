@@ -1,0 +1,5 @@
+#surefire_0
+#Wed Oct 02 18:09:45 CDT 2019
+user.dir=/opt/tools/maven/MyProject/maven-demo/maven-demo-backend
+localRepository=/home/dc-user/.m2/repository
+basedir=/opt/tools/maven/MyProject/maven-demo/maven-demo-backend
