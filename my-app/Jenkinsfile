@@ -3,7 +3,6 @@ pipeline {
     stages {
         stage('clean') { 
             steps { 
-                sh var a=`echo 'This is a minimal pipeline.'`` 
                 sh 'mvn --version'
                 sh "u are at path:$pwd"
                 sh "/opt/tools/apache-maven-3.6.2/bin/mvn -f /opt/tools/maven/MyProject/my-app/pom.xml clean test"
