@@ -8,7 +8,7 @@ pipeline {
                 sh pwd
                 sh 'cd /opt/tools/maven/MyProject/my-app/'
                 sh pwd
-                sh "mvn -f /opt/tools/maven/MyProject/my-app/pom.xml clean"
+                sh "mvn clean"
             }
         }
         stage('Build') { 
