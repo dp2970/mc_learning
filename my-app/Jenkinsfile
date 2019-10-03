@@ -12,10 +12,12 @@ pipeline {
             steps { 
                echo 'This is a minimal pipeline.' 
             }
+        }
         stage('Build') { 
             steps { 
                echo 'This is a minimal pipeline.' 
-            }    
+            }
+        }
     }
     post {
         always {
