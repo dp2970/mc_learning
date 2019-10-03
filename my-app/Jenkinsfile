@@ -4,8 +4,8 @@ pipeline {
         stage('clean') { 
             steps { 
                 dir("/opt/tools/maven/MyProject/my-app/") {
-    sh "pwd"
-                     sh "mvn clean"
+                     sh "echo U are under this path pwd"
+                     sh "mvn clean "
 }
                 sh 'mvn --version'
                 sh "echo u are at path:$pwd"
