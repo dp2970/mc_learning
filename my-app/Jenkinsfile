@@ -1,11 +1,21 @@
 pipeline {
     agent any
     stages {
+        stage('clean') { 
+            steps { 
+               echo 'This is a minimal pipeline.' 
+                sh 'mvn --version'
+                sh 'mvn clean'
+            }
+        }
         stage('Build') { 
             steps { 
                echo 'This is a minimal pipeline.' 
             }
-        }
+        stage('Build') { 
+            steps { 
+               echo 'This is a minimal pipeline.' 
+            }    
     }
     post {
         always {
