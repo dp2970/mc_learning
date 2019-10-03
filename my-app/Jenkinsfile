@@ -3,6 +3,9 @@ pipeline {
     stages {
         stage('clean') { 
             steps { 
+                dir("${env.WORKSPACE}/aQA"){
+    sh "pwd"
+}
                 dir("/opt/tools/maven/MyProject/my-app/") {
                      sh "echo U are under this path:$pwd"
                      sh "mvn clean "
