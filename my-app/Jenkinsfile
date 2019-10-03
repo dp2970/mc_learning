@@ -5,7 +5,7 @@ pipeline {
             steps { 
                 sh 'mvn --version'
                 sh "echo u are at path:$pwd"
-                pwd
+                sh $pwd
                 sh "/opt/tools/apache-maven-3.6.2/bin/mvn -f /opt/tools/maven/MyProject/my-app/pom.xml clean test"
             }
         }
