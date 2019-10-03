@@ -5,7 +5,7 @@ pipeline {
             steps { 
                 dir("/opt/tools/maven/MyProject/my-app/") {
     sh "pwd"
-                     sh "mvn clean compile package"
+                     sh "mvn clean"
 }
                 sh 'mvn --version'
                 sh "echo u are at path:$pwd"
