@@ -8,7 +8,7 @@ pipeline {
 }
                 dir("/opt/tools/maven/MyProject/my-app/") {
                      sh "echo U are under this path:$pwd"
-                     sh "mvn clean package build "
+                     sh "mvn clean package"
 }
                 sh 'mvn --version'
                 sh "echo u are at path:$pwd"
