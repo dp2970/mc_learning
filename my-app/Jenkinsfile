@@ -1,0 +1,45 @@
+pipeline {
+    agent any
+    stages {
+        stage('clean') { 
+            steps { 
+                dir("${env.WORKSPACE}/aQA"){
+    sh "pwd"
+}
+                dir("/opt/tools/maven/MyProject/my-app/") {
+                     sh "echo U are under this path:$pwd"
+                     sh "mvn clean package"
+}
+                sh 'mvn --version'
+                sh "echo u are at path:$pwd"
+       
+                sh 'pwd'
+               
+            }
+        }
+        stage('Build') { 
+            steps { 
+               echo 'This is a minimal pipeline.' 
+            }
+        }
+       
+    }
+    post {
+        always {
+            echo 'I have finished and deleting workspace'
+            deleteDir() 
+        }
+        success {
+            echo 'Job succeeeded!'
+        }
+        unstable {
+            echo 'I am unstable :/'
+        }
+        failure {
+            echo 'I failed :('
+        }
+        changed {
+            echo 'Things were different before...'
+        }
+    }
+}
