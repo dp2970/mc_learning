@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+    stages {
+        stage('Git') {
+            steps {
+                sh 'git --version'
+	
+                }
+        }
+    }
+    post{
+        always{
+            cleanWs()
+        }
+    }
+
+}
